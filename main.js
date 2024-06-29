@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function generateSongButtons() {
     track_list.forEach((track, index) => {
       const button = document.createElement("button");
-      button.className = "song-button border p-2"; // puedes añadir más clases para estilizar
+      button.className = "song-button border text-2xl p-2 hover:bg-white/5 active:bg-white active:text-black"; // puedes añadir más clases para estilizar
       button.textContent = `${track.name} - ${track.artist}`;
       button.addEventListener("click", () => {
         loadTrack(index);
@@ -252,4 +252,12 @@ document.addEventListener("DOMContentLoaded", () => {
   generateSongButtons();
 });
 
-// Resto de tu código...
+function Fullscreen() {
+  if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+  } else {
+      if (document.exitFullscreen) {
+          document.exitFullscreen();
+      }
+  }
+}

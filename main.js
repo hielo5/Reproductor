@@ -40,6 +40,7 @@ let track_list = [
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0003%20KHEA%20%20Ayer%20Me%20Llam%C3%B3%20Mi%20Ex.mp3",
   },
 ];
+
 function loadTrack(track_index) {
   clearInterval(updateTimer);
   resetValues();
@@ -60,7 +61,6 @@ function loadTrack(track_index) {
   curr_track.addEventListener("ended", nextTrack);
 }
 
-
 function resetValues() {
   curr_time.textContent = "00:00";
   total_duration.textContent = "00:00";
@@ -78,13 +78,13 @@ function playpauseTrack() {
 function playTrack() {
   curr_track.play();
   isPlaying = true;
-  playpause_btn.innerHTML = '<i>pausa</i>';
+  playpause_btn.innerHTML = '<svg width="40"  height="40" viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-pause"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" /><path d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" /></svg>';
 }
 
 function pauseTrack() {
   curr_track.pause();
   isPlaying = false;
-  playpause_btn.innerHTML = '<i>play</i>';
+  playpause_btn.innerHTML = '<svg width="40"  height="40" viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" /></svg>';
 }
 
 function nextTrack() {
@@ -135,4 +135,49 @@ function seekUpdate() {
   }
 }
 
+function OpenList() {
+  // Obtener los elementos por su id
+  const reproductor = document.getElementById("Reproductor");
+  const lista = document.getElementById("lista");
 
+  // Agregar la clase "hidden" al elemento con id "Reproductor"
+  reproductor.classList.add("hidden");
+
+  // Quitar la clase "hidden" al elemento con id "lista"
+  lista.classList.remove("hidden");
+}
+
+function CloseList() {
+  // Obtener los elementos por su id
+  const reproductor = document.getElementById("Reproductor");
+  const lista = document.getElementById("lista");
+
+  // Quitar la clase "hidden" al elemento con id "Reproductor"
+  reproductor.classList.remove("hidden");
+
+  // Agregar la clase "hidden" al elemento con id "lista"
+  lista.classList.add("hidden");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const lista = document.getElementById("lista");
+
+  // Función para generar botones de canciones
+  function generateSongButtons() {
+    track_list.forEach((track, index) => {
+      const button = document.createElement("button");
+      button.className = "song-button border"; // puedes añadir más clases para estilizar
+      button.textContent = `${track.name} - ${track.artist}`;
+      button.addEventListener("click", () => {
+        loadTrack(index);
+        playTrack(); // Reproduce la canción seleccionada
+        CloseList(); // Cierra la lista
+      });
+      lista.appendChild(button);
+    });
+  }
+
+  generateSongButtons();
+});
+
+// Resto de tu código...

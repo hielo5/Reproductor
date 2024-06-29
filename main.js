@@ -24,20 +24,92 @@ let track_list = [
   {
     name: "Message In A Bottle",
     artist: "The Police",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/caratula/0001%20The%20Police%20-%20Message%20In%20A%20Bottle.jpg",
+    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0001%20The%20Police%20-%20Message%20In%20A%20Bottle.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0001%20The%20Police%20-%20Message%20In%20A%20Bottle.mp3"
   },
   {
     name: "Música ligera",
     artist: "Soda stereo",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/caratula/0002%20soda%20stereo%20musica%20ligera.jpg",
+    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0002%20soda%20stereo%20musica%20ligera.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0002%20soda%20stereo%20musica%20ligera.mp3"
   },
   {
     name: "Ayer Me Llamó Mi Ex",
     artist: "KHEA ",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/caratula/0003%20KHEA%20%20Ayer%20Me%20Llam%C3%B3%20Mi%20Ex.jpg",
+    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0003%20KHEA%20%20Ayer%20Me%20Llam%C3%B3%20Mi%20Ex.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0003%20KHEA%20%20Ayer%20Me%20Llam%C3%B3%20Mi%20Ex.mp3",
+  },
+  {
+    name: "Love Is A Long Road",
+    artist: "Tom Petty",
+    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0004%20Love%20Is%20A%20Long%20Road%20-%20Tom%20Petty.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0004%20Love%20Is%20A%20Long%20Road%20-%20Tom%20Petty.m4a",
+  },
+  {
+    name: "Un Misil en Mi Placard",
+    artist: "Soda Stereo",
+    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0005%20Un%20Misil%20en%20Mi%20Placard%20-%20Soda%20Stereo.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0005%20Un%20Misil%20en%20Mi%20Placard%20-%20Soda%20Stereo.m4a",
+  },
+  {
+    name: "Snow (Hey Oh)",
+    artist: "Red Hot Chili Peppers",
+    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0006%20Snow%20(Hey%20Oh)%20-%20Red%20Hot%20Chili%20Peppers.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0006%20Snow%20(Hey%20Oh)%20-%20Red%20Hot%20Chili%20Peppers.m4a",
+  },
+  {
+    name: "Tatiana",
+    artist: "La Femme",
+    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0007%20Tatiana%20-%20La%20Femme.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0007%20Tatiana%20-%20La%20Femme.m4a",
+  },
+  {
+    name: " The Rockafeller Skank - Remastered Version",
+    artist: "Fatboy Slim",
+    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0008%20The%20Rockafeller%20Skank%20-%20Remastered%20Version%20-%20Fatboy%20Slim.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0008%20The%20Rockafeller%20Skank%20-%20Remastered%20Version%20-%20Fatboy%20Slim.m4a",
+  },
+  {
+    name: "Otra Noche",
+    artist: "Los Ángeles Azules, Nicki Nicole",
+    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0009%20Otra%20Noche%20-%20Los%20%C3%81ngeles%20Azules,%20Nicki%20Nicole.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0009%20Otra%20Noche%20-%20Los%20%C3%81ngeles%20Azules,%20Nicki%20Nicole.m4a",
+  },
+  {
+    name: "Si No Te Tengo Ángel Aquello Que Pasó",
+    artist: "Ke Personajes",
+    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0010%20Si%20No%20Te%20Tengo%20%C3%81ngel%20Aquello%20Que%20Pas%C3%B3%20-%20Ke%20Personajes.webp",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0010%20Si%20No%20Te%20Tengo%20%C3%81ngel%20Aquello%20Que%20Pas%C3%B3%20-%20Ke%20Personajes.m4a",
+  },
+  {
+    name: "Adiós Amor Oye Mujer",
+    artist: "Ke Personajes",
+    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0011%20Adi%C3%B3s%20Amor%20Oye%20Mujer%20-%20Ke%20Personajes.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0011%20Adi%C3%B3s%20Amor%20Oye%20Mujer%20-%20Ke%20Personajes.m4a",
+  },
+  {
+    name: "Pasarela ",
+    artist: "Ñejo & Dalmata",
+    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0012%20Pasarela%20-%20%C3%91ejo%20&%20Dalmata.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0012%20Pasarela%20-%20%C3%91ejo%20&%20Dalmata.m4a",
+  },
+  {
+    name: "Si Me Dices Que Si",
+    artist: "La K'onga",
+    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0013%20Si%20Me%20Dices%20Que%20Si%20-%20La%20K'onga.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0013%20Si%20Me%20Dices%20Que%20Si%20-%20La%20K'onga.m4a",
+  },
+  {
+    name: "Te Mentiria",
+    artist: "La K'onga",
+    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0014%20La%20Konga%20-%20Te%20Mentiria.webp",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0014%20La%20Konga%20-%20Te%20Mentiria.mp3",
+  },
+  {
+    name: "0015 Me Va Bien Sin Ti",
+    artist: "La K'onga, Marama",
+    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0015%20Me%20Va%20Bien%20Sin%20Ti%20-%20La%20K'onga,%20Marama.webp",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0015%20Me%20Va%20Bien%20Sin%20Ti%20-%20La%20K'onga,%20Marama.m4a",
   },
 ];
 
@@ -166,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function generateSongButtons() {
     track_list.forEach((track, index) => {
       const button = document.createElement("button");
-      button.className = "song-button border"; // puedes añadir más clases para estilizar
+      button.className = "song-button border p-2"; // puedes añadir más clases para estilizar
       button.textContent = `${track.name} - ${track.artist}`;
       button.addEventListener("click", () => {
         loadTrack(index);

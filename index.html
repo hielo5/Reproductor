@@ -5,16 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reproductor</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
-<body class="bg-black text-white ">
-  <div class="grid gap-2 border h-screen max-h-[360px] m-auto">
-    <div class="grid grid-cols-2 border h-[201px] ">
+<body class="bg-black text-white">
+  <div id="Reproductor" class="grid gap-2 border h-screen max-h-[360px] m-auto">
+    <div class="grid grid-cols-2 border h-[201px]">
       <div class="">
-          <img id="track_art" class="" alt="Track Art">
+        <img id="track_art" class="" alt="Track Art">
       </div>
-
       <div>
+        <button class="p-4 hover:bg-white/5 active:bg-white active:text-black grid place-items-center" onclick="OpenList()">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-playlist">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M14 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+            <path d="M17 17v-13h4"/>
+            <path d="M13 5h-10"/>
+            <path d="M3 9l10 0"/>
+            <path d="M9 13h-6"/>
+          </svg>
+        </button>
         <div class="now-playing text-right pr-2">/</div>
         <div class="track-name text-2xl">Titulo</div>
         <div class="track-artist">Artista</div>
@@ -29,13 +37,24 @@
 
     <div class="border grid grid-cols-3 text-center">
       <div class="prev-track p-2 hover:bg-white/5 active:bg-white active:text-black grid place-items-center" onclick="prevTrack()">
-        <svg width="40"  height="40"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-track-prev"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z" /><path d="M9.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z" /></svg>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-player-track-prev">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M20.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z"/>
+          <path d="M9.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z"/>
+        </svg>
       </div>
       <div class="playpause-track p-6 hover:bg-white/5 active:bg-white active:text-black grid place-items-center" onclick="playpauseTrack()">
-        <svg width="40"  height="40" viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" /></svg>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-player-play">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z"/>
+        </svg>
       </div>
       <div class="next-track p-2 hover:bg-white/5 active:bg-white active:text-black grid place-items-center" onclick="nextTrack()">
-        <svg width="40"  height="40"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-track-next"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 5v14c0 .86 1.012 1.318 1.659 .753l8 -7a1 1 0 0 0 0 -1.506l-8 -7c-.647 -.565 -1.659 -.106 -1.659 .753z" /><path d="M13 5v14c0 .86 1.012 1.318 1.659 .753l8 -7a1 1 0 0 0 0 -1.506l-8 -7c-.647 -.565 -1.659 -.106 -1.659 .753z" /></svg>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-player-track-next">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M2 5v14c0 .86 1.012 1.318 1.659 .753l8 -7a1 1 0 0 0 0 -1.506l-8 -7c-.647 -.565 -1.659 -.106 -1.659 .753z"/>
+          <path d="M13 5v14c0 .86 1.012 1.318 1.659 .753l8 -7a1 1 0 0 0 0 -1.506l-8 -7c-.647 -.565 -1.659 -.106 -1.659 .753z"/>
+        </svg>
       </div>
     </div>
 
@@ -44,8 +63,24 @@
       <input type="range" min="1" max="100" value="100" class="volume_slider" onchange="setVolume()">
     </div>
   </div>
-  <!-- Load the main script for the player -->
+
+  <div id="lista" class="gap-2 border h-screen max-h-[360px] m-auto grid hidden">
+    <button class="border p-4 h-[80px] hover:bg-white/5 active:bg-white active:text-black grid grid-cols-2" onclick="CloseList()">
+      <span></span>
+      <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-playlist-off ml-4">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M14 14a3 3 0 1 0 3 3"/>
+        <path d="M17 13v-9h4"/>
+        <path d="M13 5h-4m-4 0h-2"/>
+        <path d="M3 9h6"/>
+        <path d="M9 13h-6"/>
+        <path d="M3 3l18 18"/>
+      </svg>
+    </button>
+    <div id="listas" class="grid px-2 overflow-auto">
+      <!-- Aquí se generarán los botones -->
+    </div>
+  </div>
   <script src="main.js"></script>
 </body>
 </html>
-

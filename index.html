@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reproductor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-black text-white">
+  <div class="grid gap-2 border h-screen max-h-[360px]">
+    <div class="grid grid-cols-2 border h-[201px] ">
+      <div class="">
+          <img id="track_art" class="" alt="Track Art">
+      </div>
+
+      <div>
+        <div class="now-playing text-right ">/</div>
+        <div class="track-name">Titulo</div>
+        <div class="track-artist">Artista</div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-6 text-center p-2 ">
+      <div class="current-time">00:00</div>
+      <input type="range" min="1" max="100" value="0" class="seek_slider col-span-4 accent-gray-500" onchange="seekTo()">
+      <div class="total-duration">00:00</div>
+    </div>
+
+    <div class="border grid grid-cols-3 text-center">
+      <div class="prev-track p-2 hover:bg-white/5 active:bg-white active:text-black grid place-items-center" onclick="prevTrack()">Volver</div>
+      <div class="playpause-track p-2 hover:bg-white/5 active:bg-white active:text-black grid place-items-center" onclick="playpauseTrack()">Play/Pausa</div>
+      <div class="next-track p-2 hover:bg-white/5 active:bg-white active:text-black grid place-items-center" onclick="nextTrack()">siguiente</div>
+    </div>
+
+    <div class="grid text-center p-2 hidden">
+      <div>Vol</div>
+      <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+    </div>
+  </div>
+  <!-- Load the main script for the player -->
+  <script src="main.js"></script>
+</body>
+</html>
+

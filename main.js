@@ -17,98 +17,113 @@ let isPlaying = false;
 let updateTimer;
 
 // Create new audio element
-let curr_track = document.createElement('audio');
+let curr_track = document.createElement("audio");
 
 // Define the tracks that have to be played
 let track_list = [
   {
     name: "Message In A Bottle",
     artist: "The Police",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0001%20The%20Police%20-%20Message%20In%20A%20Bottle.jpg",
-    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0001%20The%20Police%20-%20Message%20In%20A%20Bottle.mp3"
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0001%20The%20Police%20-%20Message%20In%20A%20Bottle.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0001%20The%20Police%20-%20Message%20In%20A%20Bottle.mp3",
   },
   {
     name: "Música ligera",
     artist: "Soda stereo",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0002%20soda%20stereo%20musica%20ligera.jpg",
-    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0002%20soda%20stereo%20musica%20ligera.mp3"
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0002%20soda%20stereo%20musica%20ligera.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0002%20soda%20stereo%20musica%20ligera.mp3",
   },
   {
     name: "Ayer Me Llamó Mi Ex",
     artist: "KHEA ",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0003%20KHEA%20%20Ayer%20Me%20Llam%C3%B3%20Mi%20Ex.jpg",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0003%20KHEA%20%20Ayer%20Me%20Llam%C3%B3%20Mi%20Ex.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0003%20KHEA%20%20Ayer%20Me%20Llam%C3%B3%20Mi%20Ex.mp3",
   },
   {
     name: "Love Is A Long Road",
     artist: "Tom Petty",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0004%20Love%20Is%20A%20Long%20Road%20-%20Tom%20Petty.jpg",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0004%20Love%20Is%20A%20Long%20Road%20-%20Tom%20Petty.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0004%20Love%20Is%20A%20Long%20Road%20-%20Tom%20Petty.m4a",
   },
   {
     name: "Un Misil en Mi Placard",
     artist: "Soda Stereo",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0005%20Un%20Misil%20en%20Mi%20Placard%20-%20Soda%20Stereo.jpg",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0005%20Un%20Misil%20en%20Mi%20Placard%20-%20Soda%20Stereo.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0005%20Un%20Misil%20en%20Mi%20Placard%20-%20Soda%20Stereo.m4a",
   },
   {
     name: "Snow (Hey Oh)",
     artist: "Red Hot Chili Peppers",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0006%20Snow%20(Hey%20Oh)%20-%20Red%20Hot%20Chili%20Peppers.jpg",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0006%20Snow%20(Hey%20Oh)%20-%20Red%20Hot%20Chili%20Peppers.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0006%20Snow%20(Hey%20Oh)%20-%20Red%20Hot%20Chili%20Peppers.m4a",
   },
   {
     name: "Tatiana",
     artist: "La Femme",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0007%20Tatiana%20-%20La%20Femme.jpg",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0007%20Tatiana%20-%20La%20Femme.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0007%20Tatiana%20-%20La%20Femme.m4a",
   },
   {
     name: " The Rockafeller Skank - Remastered Version",
     artist: "Fatboy Slim",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0008%20The%20Rockafeller%20Skank%20-%20Remastered%20Version%20-%20Fatboy%20Slim.jpg",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0008%20The%20Rockafeller%20Skank%20-%20Remastered%20Version%20-%20Fatboy%20Slim.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0008%20The%20Rockafeller%20Skank%20-%20Remastered%20Version%20-%20Fatboy%20Slim.m4a",
   },
   {
     name: "Otra Noche",
     artist: "Los Ángeles Azules, Nicki Nicole",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0009%20Otra%20Noche%20-%20Los%20%C3%81ngeles%20Azules,%20Nicki%20Nicole.jpg",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0009%20Otra%20Noche%20-%20Los%20%C3%81ngeles%20Azules,%20Nicki%20Nicole.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0009%20Otra%20Noche%20-%20Los%20%C3%81ngeles%20Azules,%20Nicki%20Nicole.m4a",
   },
   {
     name: "Si No Te Tengo Ángel Aquello Que Pasó",
     artist: "Ke Personajes",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0010%20Si%20No%20Te%20Tengo%20%C3%81ngel%20Aquello%20Que%20Pas%C3%B3%20-%20Ke%20Personajes.webp",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0010%20Si%20No%20Te%20Tengo%20%C3%81ngel%20Aquello%20Que%20Pas%C3%B3%20-%20Ke%20Personajes.webp",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0010%20Si%20No%20Te%20Tengo%20%C3%81ngel%20Aquello%20Que%20Pas%C3%B3%20-%20Ke%20Personajes.m4a",
   },
   {
     name: "Adiós Amor Oye Mujer",
     artist: "Ke Personajes",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0011%20Adi%C3%B3s%20Amor%20Oye%20Mujer%20-%20Ke%20Personajes.jpg",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0011%20Adi%C3%B3s%20Amor%20Oye%20Mujer%20-%20Ke%20Personajes.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0011%20Adi%C3%B3s%20Amor%20Oye%20Mujer%20-%20Ke%20Personajes.m4a",
   },
   {
     name: "Pasarela ",
     artist: "Ñejo & Dalmata",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0012%20Pasarela%20-%20%C3%91ejo%20&%20Dalmata.jpg",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0012%20Pasarela%20-%20%C3%91ejo%20&%20Dalmata.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0012%20Pasarela%20-%20%C3%91ejo%20&%20Dalmata.m4a",
   },
   {
     name: "Si Me Dices Que Si",
     artist: "La K'onga",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0013%20Si%20Me%20Dices%20Que%20Si%20-%20La%20K'onga.jpg",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0013%20Si%20Me%20Dices%20Que%20Si%20-%20La%20K'onga.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0013%20Si%20Me%20Dices%20Que%20Si%20-%20La%20K'onga.m4a",
   },
   {
     name: "Te Mentiria",
     artist: "La K'onga",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0014%20La%20Konga%20-%20Te%20Mentiria.webp",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0014%20La%20Konga%20-%20Te%20Mentiria.webp",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0014%20La%20Konga%20-%20Te%20Mentiria.mp3",
   },
   {
     name: "0015 Me Va Bien Sin Ti",
     artist: "La K'onga, Marama",
-    image: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0015%20Me%20Va%20Bien%20Sin%20Ti%20-%20La%20K'onga,%20Marama.webp",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0015%20Me%20Va%20Bien%20Sin%20Ti%20-%20La%20K'onga,%20Marama.webp",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0015%20Me%20Va%20Bien%20Sin%20Ti%20-%20La%20K'onga,%20Marama.m4a",
   },
 ];
@@ -120,14 +135,14 @@ function loadTrack(track_index) {
   curr_track.load();
 
   // Seleccionar el elemento <img> y actualizar su src
-  const track_art = document.getElementById('track_art');
+  const track_art = document.getElementById("track_art");
   track_art.src = track_list[track_index].image;
   // Añadir clases para asegurar tamaño
-  track_art.className = "h-[200px] border";
+  track_art.className = "h-[199px] border-r-2";
 
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
-  now_playing.textContent = (track_index + 1) + " / " + track_list.length;
+  now_playing.textContent = track_index + 1 + " / " + track_list.length;
 
   updateTimer = setInterval(seekUpdate, 1000);
   curr_track.addEventListener("ended", nextTrack);
@@ -150,26 +165,26 @@ function playpauseTrack() {
 function playTrack() {
   curr_track.play();
   isPlaying = true;
-  playpause_btn.innerHTML = '<svg width="50"  height="50" viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-pause"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" /><path d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" /></svg>';
+  playpause_btn.innerHTML =
+    '<svg width="50"  height="50" viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-pause"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" /><path d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" /></svg>';
 }
 
 function pauseTrack() {
   curr_track.pause();
   isPlaying = false;
-  playpause_btn.innerHTML = '<svg width="50"  height="50" viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" /></svg>';
+  playpause_btn.innerHTML =
+    '<svg width="50"  height="50" viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" /></svg>';
 }
 
 function nextTrack() {
-  if (track_index < track_list.length - 1)
-    track_index += 1;
+  if (track_index < track_list.length - 1) track_index += 1;
   else track_index = 0;
   loadTrack(track_index);
   playTrack();
 }
 
 function prevTrack() {
-  if (track_index > 0)
-    track_index -= 1;
+  if (track_index > 0) track_index -= 1;
   else track_index = track_list.length;
   loadTrack(track_index);
   playTrack();
@@ -193,14 +208,26 @@ function seekUpdate() {
     seek_slider.value = seekPosition;
 
     let currentMinutes = Math.floor(curr_track.currentTime / 60);
-    let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+    let currentSeconds = Math.floor(
+      curr_track.currentTime - currentMinutes * 60
+    );
     let durationMinutes = Math.floor(curr_track.duration / 60);
-    let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+    let durationSeconds = Math.floor(
+      curr_track.duration - durationMinutes * 60
+    );
 
-    if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
-    if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
-    if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
-    if (durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
+    if (currentSeconds < 10) {
+      currentSeconds = "0" + currentSeconds;
+    }
+    if (durationSeconds < 10) {
+      durationSeconds = "0" + durationSeconds;
+    }
+    if (currentMinutes < 10) {
+      currentMinutes = "0" + currentMinutes;
+    }
+    if (durationMinutes < 10) {
+      durationMinutes = "0" + durationMinutes;
+    }
 
     curr_time.textContent = currentMinutes + ":" + currentSeconds;
     total_duration.textContent = durationMinutes + ":" + durationSeconds;
@@ -238,7 +265,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function generateSongButtons() {
     track_list.forEach((track, index) => {
       const button = document.createElement("button");
-      button.className = "song-button border text-2xl p-2 hover:bg-white/5 active:bg-white active:text-black"; // puedes añadir más clases para estilizar
+      button.className =
+        "song-button border-y border-x-2 text-2xl p-2 hover:bg-white/10 active:bg-white active:text-black"; // puedes añadir más clases para estilizar
       button.textContent = `${track.name} - ${track.artist}`;
       button.addEventListener("click", () => {
         loadTrack(index);
@@ -254,10 +282,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function Fullscreen() {
   if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
+    document.documentElement.requestFullscreen();
   } else {
-      if (document.exitFullscreen) {
-          document.exitFullscreen();
-      }
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
   }
 }

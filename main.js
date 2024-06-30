@@ -138,7 +138,7 @@ function loadTrack(track_index) {
   const track_art = document.getElementById("track_art");
   track_art.src = track_list[track_index].image;
   // Añadir clases para asegurar tamaño
-  track_art.className = "h-[180px] border-r-2";
+  track_art.className = "h-[188px] border-r-2";
 
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;

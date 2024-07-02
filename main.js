@@ -271,6 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
       button.addEventListener("click", () => {
         loadTrack(index);
         playTrack(); // Reproduce la canción seleccionada
+        CloseList(); // Cierra la lista
       });
       lista.appendChild(button);
     });

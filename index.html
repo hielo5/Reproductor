@@ -6,7 +6,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Pod-Cast</title>
 </head>
-<body class="bg-black text-white blur-in font-semibold grid sm:max-w-[740px] m-auto gap-x-2 p-2 accent-[#2A2A2A]">
+<body class="bg-black text-white blur-in font-semibold grid sm:max-w-[623px] m-auto gap-x-2 p-2 accent-[#2A2A2A]">
 
   <div id="Reproductor" class="grid sm:grid-cols-2 sm:gap-2 col-span-1 sticky top-0 bg-black/80 backdrop-blur-md ">
 
@@ -17,14 +17,14 @@
       </div>
     </div>
 
-    <div class="ssssssssssssssss">
-      <div class="relative bg-[#121212] rounded-2xl p-2 mt-2 h-[100px]">
+    <div >
+
+      <div onclick="OpenList()" class="relative bg-[#121212] active:bg-white active:text-black hover:bg-white/5 rounded-2xl p-2 mt-2 h-[100px]">
         <div class="track-name text-xl text-ellipsis">Titulo</div>
         <div class="track-artist absolute bottom-2 w-full text-center">Artista</div>
       </div>
   
-      <div class="grid grid-cols-1 gap-2 h-[50px] rounded-2xl mt-2">
-        <button onclick="OpenList()" class="bg-[#121212] rounded-2xl active:bg-white active:text-black hover:bg-white/5">Abrir Lista</button>
+      <div class="grid grid-cols-1 gap-2 h-[50px] rounded-2xl mt-2 hidden">
         <button onclick="Fullscreen()" class="bg-[#121212] rounded-2xl active:bg-white active:text-black hover:bg-white/5 hidden">Pantalla Completa</button>
       </div>
   
@@ -40,6 +40,7 @@
         <div class="next-track col-span-2 bg-[#121212] rounded-2xl active:bg-white active:text-black hover:bg-white/5 grid place-items-center" onclick="nextTrack()"><svg width="50"  height="50"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-skip-forward"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 5v14a1 1 0 0 0 1.504 .864l12 -7a1 1 0 0 0 0 -1.728l-12 -7a1 1 0 0 0 -1.504 .864z" /><path d="M20 4a1 1 0 0 1 .993 .883l.007 .117v14a1 1 0 0 1 -1.993 .117l-.007 -.117v-14a1 1 0 0 1 1 -1z" /></svg></div>
         <span class="h-[20px]"></span>
       </div>
+
   
       <div class="grid grid-cols-5 h-[80px] text-center my-3 p-4 bg-[#121212] rounded-2xl">
         <p class="text-center text-xl col-span-5">Vol</p>

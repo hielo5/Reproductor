@@ -296,9 +296,8 @@ if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: track_list[track_index].name,
     artist: track_list[track_index].artist,
-    album: track_list[track_index].image, // Puedes agregar el nombre del álbum si tienes esta información
     artwork: [
-      { src: track_list[track_index].image, sizes: '512x512', type: 'image/jpeg' }
+      { src: track_list[track_index].image, sizes: '512x512', type: 'image/jpeg/webp' }
     ]
   });
 
@@ -313,9 +312,8 @@ function updateMediaSession() {
     navigator.mediaSession.metadata = new MediaMetadata({
       title: track_list[track_index].name,
       artist: track_list[track_index].artist,
-      album: track_list[track_index].image, // Puedes agregar el nombre del álbum si tienes esta información
       artwork: [
-        { src: track_list[track_index].image, sizes: '512x512', type: 'image/jpeg' }
+        { src: track_list[track_index].image, sizes: '512x512', type: 'image/jpeg/webp' }
       ]
     });
   }

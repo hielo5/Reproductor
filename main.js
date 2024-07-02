@@ -291,19 +291,35 @@ function Fullscreen() {
   }
 }
 
-document.addEventListener('keydown', function(event) {
-  switch(event.key) {
-    case 'Play':
-    case 'MediaPlayPause':
-      playpauseTrack();
-      break;
-    case 'NextTrack':
-      nextTrack();
-      break;
-    case 'PrevTrack':
-      prevTrack();
-      break;
-    default:
-      break;
+// Media Session API
+if ('mediaSession' in navigator) {
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: track_list[track_index].name,
+    artist: track_list[track_index].artist,
+    album: "Album Name", // Puedes agregar el nombre del álbum si tienes esta información
+    artwork: [
+      { src: track_list[track_index].image, sizes: '512x512', type: 'image/jpeg' }
+    ]
+  });
+
+  navigator.mediaSession.setActionHandler('play', playTrack);
+  navigator.mediaSession.setActionHandler('pause', pauseTrack);
+  navigator.mediaSession.setActionHandler('previoustrack', prevTrack);
+  navigator.mediaSession.setActionHandler('nexttrack', nextTrack);
+}
+
+function updateMediaSession() {
+  if ('mediaSession' in navigator) {
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: track_list[track_index].name,
+      artist: track_list[track_index].artist,
+      album: "Album Name", // Puedes agregar el nombre del álbum si tienes esta información
+      artwork: [
+        { src: track_list[track_index].image, sizes: '512x512', type: 'image/jpeg' }
+      ]
+    });
   }
-});
+}
+
+// Load the first track in the tracklist
+loadTrack(track_index);

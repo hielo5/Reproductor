@@ -291,13 +291,48 @@ function Fullscreen() {
   }
 }
 
-// Media Session API
+
+// Función para actualizar los metadatos en la Media Session API
+function updateMediaSession() {
+  if ('mediaSession' in navigator && track_list.length > 0 && track_index >= 0 && track_index < track_list.length) {
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: track_list[track_index].name,
+      artist: track_list[track_index].artist,
+      artwork: [
+        { src: track_list[track_index].image + '?' + new Date().getTime(), sizes: '512x512', type: 'image/jpeg/webp' }
+      ]
+    });
+  }
+}
+
+// Funciones de control de reproducción
+function playTrack() {
+  // Lógica para reproducir la pista actual
+}
+
+function pauseTrack() {
+  // Lógica para pausar la pista actual
+}
+
+function prevTrack() {
+  track_index = (track_index - 1 + track_list.length) % track_list.length;
+  updateMediaSession();
+  // Lógica para reproducir la pista anterior
+}
+
+function nextTrack() {
+  track_index = (track_index + 1) % track_list.length;
+  updateMediaSession();
+  // Lógica para reproducir la siguiente pista
+}
+
+// Configurar Media Session API al cargar la página
 if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: track_list[track_index].name,
     artist: track_list[track_index].artist,
     artwork: [
-      { src: track_list[track_index].image, sizes: '512x512', type: 'image/jpeg/webp' }
+      { src: track_list[track_index].image + '?' + new Date().getTime(), sizes: '512x512', type: 'image/jpeg/webp' }
     ]
   });
 
@@ -307,17 +342,3 @@ if ('mediaSession' in navigator) {
   navigator.mediaSession.setActionHandler('nexttrack', nextTrack);
 }
 
-function updateMediaSession() {
-  if ('mediaSession' in navigator) {
-    navigator.mediaSession.metadata = new MediaMetadata({
-      title: track_list[track_index].name,
-      artist: track_list[track_index].artist,
-      artwork: [
-        { src: track_list[track_index].image, sizes: '512x512', type: 'image/jpeg/webp' }
-      ]
-    });
-  }
-}
-
-// Load the first track in the tracklist
-loadTrack(track_index);

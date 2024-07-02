@@ -16,7 +16,7 @@ let track_index = 0;
 let isPlaying = false;
 let updateTimer;
 
-// Crear nuevo elemento de audio
+// Create new audio element
 let curr_track = document.createElement("audio");
 
 // Define the tracks that have to be played
@@ -128,21 +128,21 @@ let track_list = [
   },
 ];
 
-function loadTrack(track_index) {
+function loadTrack(index) {
   clearInterval(updateTimer);
   resetValues();
-  curr_track.src = track_list[track_index].path;
+  curr_track.src = track_list[index].path;
   curr_track.load();
 
   // Seleccionar el elemento <img> y actualizar su src
   const track_art = document.getElementById("track_art");
-  track_art.src = track_list[track_index].image;
+  track_art.src = track_list[index].image;
   // Añadir clases para asegurar tamaño
   track_art.className = " w-full m-auto p-2 aspect-square bg-[#121212] rounded-2xl";
 
-  track_name.textContent = track_list[track_index].name;
-  track_artist.textContent = track_list[track_index].artist;
-  now_playing.textContent = track_index + 1 + " / " + track_list.length;
+  track_name.textContent = track_list[index].name;
+  track_artist.textContent = track_list[index].artist;
+  now_playing.textContent = index + 1 + " / " + track_list.length;
 
   updateTimer = setInterval(seekUpdate, 1000);
   curr_track.addEventListener("ended", nextTrack);
@@ -269,6 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "song-button bg-[#121212] col-span-3 active:bg-white active:text-black hover:bg-white/5 grid text-left p-2"; // puedes añadir más clases para estilizar
       button.textContent = `${track.name} - ${track.artist}`;
       button.addEventListener("click", () => {
+        track_index = index; // Actualizar track_index aquí
         loadTrack(index);
         playTrack(); // Reproduce la canción seleccionada
         CloseList(); // Cierra la lista
@@ -290,52 +291,19 @@ function Fullscreen() {
   }
 }
 
-if ('mediaSession' in navigator) {
-  navigator.mediaSession.metadata = new MediaMetadata({
-    title: track_list[track_index].name,
-    artist: track_list[track_index].artist,
-    album: "Album Name", // Puedes agregar el nombre del álbum si tienes esta información
-    artwork: [
-      { src: track_list[track_index].image, sizes: '512x512', type: 'image/jpeg' }
-    ]
-  });
-
-  navigator.mediaSession.setActionHandler('play', playTrack);
-  navigator.mediaSession.setActionHandler('pause', pauseTrack);
-  navigator.mediaSession.setActionHandler('previoustrack', prevTrack);
-  navigator.mediaSession.setActionHandler('nexttrack', nextTrack);
-}
-
-function updateMediaSession() {
-  if ('mediaSession' in navigator) {
-    navigator.mediaSession.metadata = new MediaMetadata({
-      title: track_list[track_index].name,
-      artist: track_list[track_index].artist,
-      album: "Album Name", // Puedes agregar el nombre del álbum si tienes esta información
-      artwork: [
-        { src: track_list[track_index].image, sizes: '512x512', type: 'image/jpeg' }
-      ]
-    });
+document.addEventListener('keydown', function(event) {
+  switch(event.key) {
+    case 'Play':
+    case 'MediaPlayPause':
+      playpauseTrack();
+      break;
+    case 'NextTrack':
+      nextTrack();
+      break;
+    case 'PrevTrack':
+      prevTrack();
+      break;
+    default:
+      break;
   }
-}
-
-function loadTrack(track_index) {
-  clearInterval(updateTimer);
-  resetValues();
-  curr_track.src = track_list[track_index].path;
-  curr_track.load();
-
-  // Seleccionar el elemento <img> y actualizar su src
-  const track_art = document.getElementById("track_art");
-  track_art.src = track_list[track_index].image;
-  // Añadir clases para asegurar tamaño
-  track_art.className = " w-full m-auto p-2 aspect-square bg-[#121212] rounded-2xl";
-
-  track_name.textContent = track_list[track_index].name;
-  track_artist.textContent = track_list[track_index].artist;
-  now_playing.textContent = track_index + 1 + " / " + track_list.length;
-
-  updateTimer = setInterval(seekUpdate, 1000);
-  curr_track.addEventListener("ended", nextTrack);
-  updateMediaSession();
-}
+});

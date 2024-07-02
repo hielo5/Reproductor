@@ -138,7 +138,7 @@ function loadTrack(track_index) {
   const track_art = document.getElementById("track_art");
   track_art.src = track_list[track_index].image;
   // Añadir clases para asegurar tamaño
-  track_art.className = "h-[198px] border-r-2";
+  track_art.className = " w-full m-auto p-2 aspect-square bg-[#121212] rounded-2xl";
 
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
@@ -266,12 +266,11 @@ document.addEventListener("DOMContentLoaded", () => {
     track_list.forEach((track, index) => {
       const button = document.createElement("button");
       button.className =
-        "song-button border-y border-x-2 text-2xl p-2 hover:bg-white/10 active:bg-white active:text-black"; // puedes añadir más clases para estilizar
+        "song-button bg-[#121212] col-span-3 active:bg-white active:text-black hover:bg-white/5 grid sm:place-items-center text-left p-2"; // puedes añadir más clases para estilizar
       button.textContent = `${track.name} - ${track.artist}`;
       button.addEventListener("click", () => {
         loadTrack(index);
         playTrack(); // Reproduce la canción seleccionada
-        CloseList(); // Cierra la lista
       });
       lista.appendChild(button);
     });

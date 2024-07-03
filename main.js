@@ -175,13 +175,6 @@ let track_list = [
       "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0022%20Babasonicos-%20Putita.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0022%20Babasonicos-%20Putita.mp3",
   },
-                  {
-    name: "Putita",
-    artist: "Babasonicos",
-    image:
-      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0022%20Babasonicos-%20Putita.jpg",
-    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0022%20Babasonicos-%20Putita.mp3",
-  },
   {
     name: "La Dificil",
     artist: "Bad Bunny",

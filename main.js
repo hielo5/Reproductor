@@ -126,49 +126,49 @@ let track_list = [
       "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0015%20Me%20Va%20Bien%20Sin%20Ti%20-%20La%20K'onga,%20Marama.webp",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0015%20Me%20Va%20Bien%20Sin%20Ti%20-%20La%20K'onga,%20Marama.m4a",
   },
-    {
+  {
     name: "Vai Novinha Ah Ah Ah",
     artist: "Dyamante",
     image:
       "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0016%20%20Dyamante%20-%20Vai%20Novinha%20Ah%20Ah%20Ah.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0016%20%20Dyamante%20-%20Vai%20Novinha%20Ah%20Ah%20Ah.mp3",
   },
-      {
+  {
     name: "Hey Brother",
     artist: "Avicii",
     image:
       "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0017%20Avicii%20-%20Hey%20Brother.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0017%20Avicii%20-%20Hey%20Brother.mp3",
   },
-        {
+  {
     name: "Levels",
     artist: "Avicii",
     image:
       "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0018%20Avicii%20-%20Levels.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0018%20Avicii%20-%20Levels.mp3",
   },
-          {
+  {
     name: "Waiting For Love",
     artist: "Avicii",
     image:
       "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0019%20Avicii%20-%20Waiting%20For%20Love.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0019%20Avicii%20-%20Waiting%20For%20Love.mp3",
   },
-            {
+  {
     name: "Wake Me Up",
     artist: "Avicii",
     image:
       "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0020%20Avicii%20-%20Wake%20Me%20Up.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0020%20Avicii%20-%20Wake%20Me%20Up.mp3",
   },
-              {
+  {
     name: "the nights",
     artist: "Avicii",
     image:
       "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0021%20avicii%20-%20the%20nights.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0021%20avicii%20-%20the%20nights.mp3",
   },
-                {
+  {
     name: "Putita",
     artist: "Babasonicos",
     image:
@@ -182,6 +182,62 @@ let track_list = [
       "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0023%20%20Bad%20Bunny%20-%20La%20Dificil.jpg",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0023%20%20Bad%20Bunny%20-%20La%20Dificil.mp3",
   },
+  {
+    name: "Me Porto Bonito",
+    artist: "Bad Bunny",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0025%20Bad%20Bunny%20-%20Me%20Porto%20Bonito.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0025%20Bad%20Bunny%20-%20Me%20Porto%20Bonito.mp3",
+  },
+  {
+    name: "Moscow Mule",
+    artist: "Bad Bunny",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0026%20Bad%20Bunny%20-%20Moscow%20Mule.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0026%20Bad%20Bunny%20-%20Moscow%20Mule.mp3",
+  },
+  {
+    name: "Ojitos Lindos",
+    artist: "Bad Bunny",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0027%20Bad%20Bunny%20-%20Ojitos%20Lindos.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0027%20Bad%20Bunny%20-%20Ojitos%20Lindos.mp3",
+  },
+  {
+    name: "Pero Ya No",
+    artist: "Bad Bunny",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0028%20Bad%20Bunny%20-%20Pero%20Ya%20No.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0028%20Bad%20Bunny%20-%20Pero%20Ya%20No.mp3",
+  },
+  {
+    name: "Safaera",
+    artist: "Bad Bunny",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0029%20Bad%20Bunny%20-%20Safaera.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0029%20Bad%20Bunny%20-%20Safaera.mp3",
+  },
+  {
+    name: "Yonaguni",
+    artist: "Bad Bunny",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0030%20Bad%20Bunny%20-%20Yonaguni.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0030%20Bad%20Bunny%20-%20Yonaguni.mp3",
+  },
+  {
+    name: "YO VISTO ASI",
+    artist: "Bad Bunny",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0031%20Bad%20Bunny%20-%20YO%20VISTO%20ASI.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0031%20Bad%20Bunny%20-%20YO%20VISTO%20ASI.mp3",
+  },
+  {
+    name: "Bzrp Music Sessions, Vol. 43",
+    artist: "Bizarrap, Chucky73",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0032%20Bizarrap,%20Chucky73%20-%20Bzrp%20Music%20Sessions,%20Vol.%2043.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0032%20Bizarrap,%20Chucky73%20-%20Bzrp%20Music%20Sessions,%20Vol.%2043.mp3",
+  },
 ];
 
 function loadTrack(index) {
@@ -194,7 +250,8 @@ function loadTrack(index) {
   const track_art = document.getElementById("track_art");
   track_art.src = track_list[index].image;
   // Añadir clases para asegurar tamaño
-  track_art.className = " w-full m-auto p-2 aspect-square bg-[#121212] rounded-2xl";
+  track_art.className =
+    " w-full m-auto p-2 aspect-square bg-[#121212] rounded-2xl";
 
   track_name.textContent = track_list[index].name;
   track_artist.textContent = track_list[index].artist;
@@ -252,7 +309,8 @@ function seekTo() {
 }
 
 function setVolume() {
-  curr_track.volume = volume_slider.value / 100;
+  let volume = volume_slider.value / 100;
+  curr_track.volume = volume * volume;
 }
 
 function seekUpdate() {
@@ -348,30 +406,37 @@ function Fullscreen() {
 }
 
 // Media Session API
-if ('mediaSession' in navigator) {
+if ("mediaSession" in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: track_list[track_index].name,
     artist: track_list[track_index].artist,
     artwork: [
-      { src: track_list[track_index].image, sizes: '512x512', type: 'image/jpeg/webp' }
-    ]
+      {
+        src: track_list[track_index].image,
+        sizes: "512x512",
+        type: "image/jpeg/webp",
+      },
+    ],
   });
 
-  navigator.mediaSession.setActionHandler('play', playTrack);
-  navigator.mediaSession.setActionHandler('pause', pauseTrack);
-  navigator.mediaSession.setActionHandler('previoustrack', prevTrack);
-  navigator.mediaSession.setActionHandler('nexttrack', nextTrack);
+  navigator.mediaSession.setActionHandler("play", playTrack);
+  navigator.mediaSession.setActionHandler("pause", pauseTrack);
+  navigator.mediaSession.setActionHandler("previoustrack", prevTrack);
+  navigator.mediaSession.setActionHandler("nexttrack", nextTrack);
 }
 
 function updateMediaSession() {
-  if ('mediaSession' in navigator) {
+  if ("mediaSession" in navigator) {
     navigator.mediaSession.metadata = new MediaMetadata({
       title: track_list[track_index].name,
       artist: track_list[track_index].artist,
       artwork: [
-        { src: track_list[track_index].image, sizes: '512x512', type: 'image/jpeg/webp' }
-      ]
+        {
+          src: track_list[track_index].image,
+          sizes: "512x512",
+          type: "image/jpeg/webp",
+        },
+      ],
     });
   }
 }
-

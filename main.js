@@ -126,6 +126,62 @@ let track_list = [
       "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0015%20Me%20Va%20Bien%20Sin%20Ti%20-%20La%20K'onga,%20Marama.webp",
     path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0015%20Me%20Va%20Bien%20Sin%20Ti%20-%20La%20K'onga,%20Marama.m4a",
   },
+    {
+    name: "Vai Novinha Ah Ah Ah",
+    artist: "Dyamante",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0016%20%20Dyamante%20-%20Vai%20Novinha%20Ah%20Ah%20Ah.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0016%20%20Dyamante%20-%20Vai%20Novinha%20Ah%20Ah%20Ah.mp3",
+  },
+      {
+    name: "Hey Brother",
+    artist: "Avicii",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0017%20Avicii%20-%20Hey%20Brother.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0017%20Avicii%20-%20Hey%20Brother.mp3",
+  },
+        {
+    name: "Levels",
+    artist: "Avicii",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0018%20Avicii%20-%20Levels.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0018%20Avicii%20-%20Levels.mp3",
+  },
+          {
+    name: "Waiting For Love",
+    artist: "Avicii",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0019%20Avicii%20-%20Waiting%20For%20Love.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0019%20Avicii%20-%20Waiting%20For%20Love.mp3",
+  },
+            {
+    name: "Wake Me Up",
+    artist: "Avicii",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0020%20Avicii%20-%20Wake%20Me%20Up.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0020%20Avicii%20-%20Wake%20Me%20Up.mp3",
+  },
+              {
+    name: "the nights",
+    artist: "Avicii",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0021%20avicii%20-%20the%20nights.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0021%20avicii%20-%20the%20nights.mp3",
+  },
+                {
+    name: "Putita",
+    artist: "Babasonicos",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0022%20Babasonicos-%20Putita.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0022%20Babasonicos-%20Putita.mp3",
+  },
+                  {
+    name: "Putita",
+    artist: "Babasonicos",
+    image:
+      "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0022%20Babasonicos-%20Putita.jpg",
+    path: "https://fabulous-daffodil-8ff2bd.netlify.app/audio/0022%20Babasonicos-%20Putita.mp3",
+  },
 ];
 
 function loadTrack(index) {
